@@ -10,14 +10,26 @@ import Foundation
 import UIKit
 
 class FeaturedStoreCell : UICollectionViewCell {
-    @IBOutlet weak var featuredImageView: UIImageView!
+    @IBOutlet weak var featuredImageView: FeaturedImageView!
     
     override func prepareForReuse() {
         featuredImageView.image = nil
     }
     
     override func prepareForInterfaceBuilder() {
-        featuredImageView.image = UIImage(named: "appetizer-store")
+        featuredImageView.image = UIImage(named: "collection-bbq")
+    }
+}
+
+class FeaturedFoodCollectionCell: UICollectionViewCell {
+    @IBOutlet weak var featuredImageView: FeaturedImageView!
+
+    override func prepareForReuse() {
+        featuredImageView.image = nil
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        featuredImageView.image = UIImage(named: "food-banana")
     }
 }
 

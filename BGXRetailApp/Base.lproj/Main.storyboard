@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ti9-Qh-ZgB">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ti9-Qh-ZgB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TH1-4f-oQn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="440"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71a-Cl-4he">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -31,38 +30,41 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-xr-UHt">
                                                         <rect key="frame" x="20" y="8" width="324" height="54"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KnV-Ch-nci">
-                                                                <rect key="frame" x="0.0" y="0.0" width="153" height="27"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KnV-Ch-nci">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="27"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Stores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQu-rC-Q8n">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="27"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQu-rC-Q8n">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="27"/>
                                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-1t-Zaa">
-                                                                        <rect key="frame" x="133" y="0.0" width="20" height="27"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-1t-Zaa">
+                                                                        <rect key="frame" x="167" y="0.0" width="20" height="27"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="LvY-He-dX4"/>
                                                                         </constraints>
                                                                         <color key="tintColor" name="minorButtonColor"/>
+                                                                        <state key="normal" image="chevron.down.circle" catalog="system"/>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bacolod, Philippines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mji-Ls-ViQ">
                                                                 <rect key="frame" x="0.0" y="27" width="122.5" height="27"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="detailLabelColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lX1-WH-KGc">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lX1-WH-KGc">
                                                         <rect key="frame" x="344" y="8" width="50" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="rsF-w9-E14"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <color key="tintColor" name="majorButtonColor"/>
+                                                        <state key="normal" image="slider.horizontal.3" catalog="system"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -70,9 +72,9 @@
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                             </stackView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yr5-HX-WWB" userLabel="Featured Stores Collection">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yr5-HX-WWB" userLabel="Featured Stores Collection">
                                                 <rect key="frame" x="0.0" y="70" width="414" height="200"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="appBackground"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="Bdp-lI-ewH"/>
                                                 </constraints>
@@ -83,18 +85,18 @@
                                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="FeaturedStoreCell" id="4i5-j0-gMp">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedStoreCell" id="4i5-j0-gMp" customClass="FeaturedStoreCell" customModule="BGXRetailApp" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="10" width="250" height="180"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UTl-ho-aSh">
                                                             <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appetizer-store" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-vv-dDb" customClass="FeaturedImageView" customModule="BGXRetailApp" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="0.0"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection-bbq" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-vv-dDb" customClass="FeaturedImageView" customModule="BGXRetailApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iod-Ly-6AI">
-                                                                    <rect key="frame" x="0.0" y="-94.5" width="250" height="74.5"/>
+                                                                    <rect key="frame" x="0.0" y="85.5" width="250" height="74.5"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FjP-rV-iw9">
                                                                             <rect key="frame" x="20" y="8" width="132.5" height="20"/>
@@ -121,43 +123,46 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promotion Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1D-UH-gE4">
                                                                             <rect key="frame" x="20" y="28" width="130.5" height="20.5"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" name="promoLabelColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Footnote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bP-zS-L1d">
                                                                             <rect key="frame" x="20" y="48.5" width="61.5" height="18"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                                            <color key="textColor" name="minorButtonColor"/>
+                                                                            <color key="textColor" name="detailLabelColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                     <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                                                 </stackView>
                                                             </subviews>
-                                                        </view>
-                                                        <constraints>
-                                                            <constraint firstItem="Fhj-vv-dDb" firstAttribute="width" secondItem="4i5-j0-gMp" secondAttribute="width" id="1pO-TP-nDe"/>
-                                                            <constraint firstItem="iod-Ly-6AI" firstAttribute="width" secondItem="4i5-j0-gMp" secondAttribute="width" id="F2E-he-nuS"/>
-                                                            <constraint firstItem="Fhj-vv-dDb" firstAttribute="centerY" secondItem="4i5-j0-gMp" secondAttribute="centerY" id="Swx-a0-1mj"/>
-                                                            <constraint firstItem="Fhj-vv-dDb" firstAttribute="centerX" secondItem="4i5-j0-gMp" secondAttribute="centerX" id="VwJ-1B-1vU"/>
-                                                            <constraint firstItem="iod-Ly-6AI" firstAttribute="centerX" secondItem="4i5-j0-gMp" secondAttribute="centerX" id="eYE-O4-uxZ"/>
-                                                            <constraint firstAttribute="bottom" secondItem="iod-Ly-6AI" secondAttribute="bottom" constant="20" id="lEX-Xb-Sx3"/>
-                                                            <constraint firstItem="Fhj-vv-dDb" firstAttribute="height" secondItem="4i5-j0-gMp" secondAttribute="height" id="zQM-h0-fLC"/>
-                                                        </constraints>
+                                                            <constraints>
+                                                                <constraint firstItem="Fhj-vv-dDb" firstAttribute="width" secondItem="UTl-ho-aSh" secondAttribute="width" id="1pO-TP-nDe"/>
+                                                                <constraint firstItem="iod-Ly-6AI" firstAttribute="width" secondItem="UTl-ho-aSh" secondAttribute="width" id="F2E-he-nuS"/>
+                                                                <constraint firstItem="Fhj-vv-dDb" firstAttribute="centerY" secondItem="UTl-ho-aSh" secondAttribute="centerY" id="Swx-a0-1mj"/>
+                                                                <constraint firstItem="Fhj-vv-dDb" firstAttribute="centerX" secondItem="UTl-ho-aSh" secondAttribute="centerX" id="VwJ-1B-1vU"/>
+                                                                <constraint firstItem="iod-Ly-6AI" firstAttribute="centerX" secondItem="UTl-ho-aSh" secondAttribute="centerX" id="eYE-O4-uxZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="iod-Ly-6AI" secondAttribute="bottom" constant="20" id="lEX-Xb-Sx3"/>
+                                                                <constraint firstItem="Fhj-vv-dDb" firstAttribute="height" secondItem="UTl-ho-aSh" secondAttribute="height" id="zQM-h0-fLC"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="featuredImageView" destination="Fhj-vv-dDb" id="dY6-yi-GCh"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-3I-tJ7">
-                                                <rect key="frame" x="0.0" y="270" width="414" height="70"/>
+                                                <rect key="frame" x="0.0" y="270" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajc-f2-FBR">
-                                                        <rect key="frame" x="20" y="8" width="156.5" height="54"/>
+                                                        <rect key="frame" x="20" y="8" width="156.5" height="34"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnt-lI-bDi">
-                                                        <rect key="frame" x="320" y="8" width="74" height="54"/>
+                                                        <rect key="frame" x="320" y="8" width="74" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <color key="tintColor" name="minorButtonColor"/>
                                                         <state key="normal" title="See All &gt;">
@@ -169,30 +174,66 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="SP8-jf-lfE"/>
+                                                    <constraint firstAttribute="height" constant="50" id="SP8-jf-lfE"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                             </stackView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x1u-BR-jrv">
-                                                <rect key="frame" x="0.0" y="340" width="414" height="100"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x1u-BR-jrv">
+                                                <rect key="frame" x="0.0" y="320" width="414" height="150"/>
+                                                <color key="backgroundColor" name="appBackground"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="lIf-9i-5X2"/>
+                                                    <constraint firstAttribute="height" constant="150" id="lIf-9i-5X2"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4jZ-Hi-mR1">
-                                                    <size key="itemSize" width="90" height="90"/>
+                                                    <size key="itemSize" width="90" height="140"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="FeaturedCollectionCell" id="mBE-yo-4Ij">
-                                                        <rect key="frame" x="0.0" y="5" width="90" height="90"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedCollectionCell" id="mBE-yo-4Ij" customClass="FeaturedFoodCollectionCell" customModule="BGXRetailApp" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="30" width="90" height="90"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AWO-67-69h">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                        </view>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QSo-EI-eMw">
+                                                                    <rect key="frame" x="22" y="5" width="53" height="77"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-banana" translatesAutoresizingMaskIntoConstraints="NO" id="NIV-F1-Nz0" customClass="FeaturedImageView" customModule="BGXRetailApp" customModuleProvider="target">
+                                                                            <rect key="frame" x="4" y="0.0" width="45" height="45"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="NIV-F1-Nz0" secondAttribute="height" multiplier="1:1" id="LE4-FE-6XZ"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="22.5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-QS-AKT">
+                                                                            <rect key="frame" x="3" y="45" width="47.5" height="16"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86C-1y-3yp">
+                                                                            <rect key="frame" x="0.0" y="61" width="53" height="16"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                                            <color key="textColor" name="detailLabelColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="NIV-F1-Nz0" firstAttribute="width" secondItem="AWO-67-69h" secondAttribute="height" multiplier="0.5" id="YHD-Xj-0eb"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="featuredImageView" destination="NIV-F1-Nz0" id="qgd-tl-qmn"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -211,7 +252,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="appBackground"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="4vl-N0-ICQ" secondAttribute="top" id="WGQ-cS-rbd"/>
                             <constraint firstItem="4vl-N0-ICQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ewl-Jb-3Ih"/>
@@ -222,6 +263,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Meals" id="XTQ-ea-TaQ"/>
                     <connections>
+                        <outlet property="featuredFoodCollectionView" destination="x1u-BR-jrv" id="gba-Hr-HrE"/>
                         <outlet property="featuredStoresCollectionView" destination="Yr5-HX-WWB" id="a1Z-jx-2dG"/>
                     </connections>
                 </viewController>
@@ -249,7 +291,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appetizer-store" width="5650" height="3767"/>
+        <image name="chevron.down.circle" catalog="system" width="64" height="62"/>
+        <image name="collection-bbq" width="4000" height="2669"/>
+        <image name="food-banana" width="3505" height="5259"/>
+        <image name="slider.horizontal.3" catalog="system" width="64" height="50"/>
+        <namedColor name="appBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="detailLabelColor">
+            <color red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="majorButtonColor">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -258,6 +309,9 @@
         </namedColor>
         <namedColor name="promoActive">
             <color red="0.0" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="promoLabelColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
