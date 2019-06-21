@@ -9,10 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var featuredStoresCollectionView: UICollectionView!
+    private var featuredStoresDataSource : UICollectionViewDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let images = [UIImage(named: "appetizer-store")]
+        
+        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "FeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
+            if let featuredCell = cell as? FeaturedStoreCell {
+                featuredCell.featuredImageView.image = image
+            }
+            
+            return cell
+        }
+        
+        self.featuredStoresDataSource = dataSource
+        
+        featuredStoresCollectionView.dataSource = dataSource
     }
 
 
