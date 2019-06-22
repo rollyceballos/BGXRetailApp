@@ -33,6 +33,18 @@ class FeaturedFoodCollectionCell: UICollectionViewCell {
     }
 }
 
+class HotDealCollectionCell : UICollectionViewCell {
+    @IBOutlet weak var hotDealImageView: UIImageView!
+    
+    override func prepareForReuse() {
+        hotDealImageView.image = nil
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        hotDealImageView.image = UIImage(named: "collection-cream")
+    }
+}
+
 @IBDesignable class FeaturedImageView : UIImageView {
     @IBInspectable var cornerRadius: CGFloat = 15 {
         didSet {
