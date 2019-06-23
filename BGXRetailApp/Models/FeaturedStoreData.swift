@@ -13,11 +13,11 @@ class FeaturedStoreDataSource<Model>: NSObject, UICollectionViewDataSource {
     typealias CellConfigurator = (Model,UICollectionViewCell) -> UICollectionViewCell
     private let featuredModels : [Model]
     private let reuseIdentifier : String
-    private let cellConfigurator : CellConfigurator
+    private let cellConfigurator : CellConfigurator?
     
     init(_ models : [Model],
          reuseIdentifier: String,
-         configurator: @escaping CellConfigurator
+         configurator: CellConfigurator?
         ) {
         featuredModels = models
         self.reuseIdentifier = reuseIdentifier
@@ -31,8 +31,12 @@ class FeaturedStoreDataSource<Model>: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
+        guard let configurator = cellConfigurator else {
+            return cell
+        }
+
         let model = featuredModels[indexPath.row]
         
-        return cellConfigurator(model,cell)
+        return configurator(model,cell)
     }
 }

@@ -19,15 +19,56 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        initFeaturedStore()
-        initFeaturedCollections()
-        initHotDeals()
+        showInitialData()
+        loadDynamicMockData()
     }
 
 }
 
 
 extension ViewController {
+    private func showInitialData() {
+        let dataSource = FeaturedStoreDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingFeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
+            cell.fadeInOut()
+            
+            return cell
+        }
+        
+        self.featuredStoresDataSource = dataSource
+        featuredStoresCollectionView.dataSource = dataSource
+        
+        let dataSource2 = FeaturedStoreDataSource(
+            [UIImage?](repeating: nil, count: 1),
+            reuseIdentifier: "LoadingFeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
+                cell.fadeInOut()
+                
+                return cell
+        }
+            
+        self.featuredCollectionDataSource = dataSource2
+        featuredFoodCollectionView.dataSource = dataSource2
+        
+        let dataSource3 = FeaturedStoreDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingHotDealCell") { (image, cell) -> UICollectionViewCell in
+            cell.fadeInOut()
+            
+            return cell
+        }
+        self.hotDealsCollectionDataSource = dataSource3
+        hotDealsCollectionView.dataSource = dataSource3
+    }
+    
+    private func loadDynamicMockData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
+            self?.initFeaturedStore()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
+            self?.initFeaturedCollections()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
+            self?.initHotDeals()
+        }
+    }
+    
     private func initFeaturedStore() {
         let images = [
             UIImage(named: "collection-salad"),
@@ -45,7 +86,7 @@ extension ViewController {
         
         self.featuredStoresDataSource = dataSource
         
-        featuredStoresCollectionView.dataSource = dataSource
+        featuredStoresCollectionView.animate(with: dataSource)
     }
     
     private func initFeaturedCollections() {
@@ -66,7 +107,7 @@ extension ViewController {
         
         self.featuredCollectionDataSource = dataSource
         
-        featuredFoodCollectionView.dataSource = dataSource
+        featuredFoodCollectionView.animate(with: dataSource)
     }
     
     func initHotDeals() {
@@ -100,6 +141,6 @@ extension ViewController {
         
         self.hotDealsCollectionDataSource = dataSource
 
-        hotDealsCollectionView.dataSource = dataSource
+        hotDealsCollectionView.animate(with: dataSource)
     }
 }
