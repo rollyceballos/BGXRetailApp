@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
+import DesignableUI
 
 class FeaturedStoreCell : UICollectionViewCell {
-    @IBOutlet weak var featuredImageView: FeaturedImageView!
+    @IBOutlet weak var featuredImageView: RoundedCornerImageView!
     
     override func prepareForReuse() {
         featuredImageView.image = nil
@@ -22,7 +23,7 @@ class FeaturedStoreCell : UICollectionViewCell {
 }
 
 class FeaturedFoodCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var featuredImageView: FeaturedImageView!
+    @IBOutlet weak var featuredImageView: RoundedCornerImageView!
 
     override func prepareForReuse() {
         featuredImageView.image = nil
@@ -48,37 +49,5 @@ class HotDealCollectionCell : UICollectionViewCell {
         hotDealImageView.image = UIImage(named: "collection-cream")
         promoLabel.text = "30% off!!! When you order Tomyam"
         detailLabel.text = "Fast Delivery"
-    }
-}
-
-//@IBDesignable
-class FeaturedImageView : UIImageView {
-    @IBInspectable var cornerRadius: CGFloat = 15 {
-        didSet {
-            refreshView(radius: cornerRadius)
-        }
-    }
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        initFeaturedImageView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initFeaturedImageView()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        initFeaturedImageView()
-    }
-    
-    private func initFeaturedImageView() {
-        refreshView(radius: cornerRadius)
-    }
-    
-    private func refreshView(radius value: CGFloat) {
-        layer.cornerRadius = value
     }
 }
