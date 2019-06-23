@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TH1-4f-oQn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="605"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71a-Cl-4he">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -92,7 +92,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection-bbq" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-vv-dDb" customClass="FeaturedImageView" customModule="BGXRetailApp" customModuleProvider="target">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection-bbq" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-vv-dDb" customClass="RoundedCornerImageView" customModule="DesignableUI">
                                                                     <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iod-Ly-6AI">
@@ -179,10 +179,10 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x1u-BR-jrv">
-                                                <rect key="frame" x="0.0" y="300" width="414" height="120"/>
+                                                <rect key="frame" x="0.0" y="300" width="414" height="115"/>
                                                 <color key="backgroundColor" name="appBackground"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="lIf-9i-5X2"/>
+                                                    <constraint firstAttribute="height" constant="115" id="lIf-9i-5X2"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="4jZ-Hi-mR1">
                                                     <size key="itemSize" width="70" height="115"/>
@@ -192,34 +192,34 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedCollectionCell" id="mBE-yo-4Ij" customClass="FeaturedFoodCollectionCell" customModule="BGXRetailApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="0.0" width="90" height="50"/>
+                                                        <rect key="frame" x="20" y="0.0" width="70" height="115"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OsV-JE-0L5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e1O-Ts-aTU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="115"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QSo-EI-eMw">
-                                                                    <rect key="frame" x="0.0" y="-36" width="90" height="122"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="102"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-banana" translatesAutoresizingMaskIntoConstraints="NO" id="NIV-F1-Nz0" customClass="FeaturedImageView" customModule="BGXRetailApp" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food-banana" translatesAutoresizingMaskIntoConstraints="NO" id="NIV-F1-Nz0" customClass="RoundedCornerImageView" customModule="DesignableUI">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="NIV-F1-Nz0" secondAttribute="height" multiplier="1:1" id="LE4-FE-6XZ"/>
                                                                             </constraints>
                                                                             <userDefinedRuntimeAttributes>
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                    <real key="value" value="36.25"/>
+                                                                                    <real key="value" value="35"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-QS-AKT">
-                                                                            <rect key="frame" x="21.5" y="90" width="47.5" height="16"/>
+                                                                            <rect key="frame" x="11.5" y="70" width="47.5" height="16"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86C-1y-3yp">
-                                                                            <rect key="frame" x="18.5" y="106" width="53" height="16"/>
+                                                                            <rect key="frame" x="8.5" y="86" width="53" height="16"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                                             <color key="textColor" name="detailLabelColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -228,9 +228,9 @@
                                                                 </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="QSo-EI-eMw" firstAttribute="centerX" secondItem="OsV-JE-0L5" secondAttribute="centerX" id="Lgb-Qc-eZv"/>
-                                                                <constraint firstItem="NIV-F1-Nz0" firstAttribute="width" secondItem="OsV-JE-0L5" secondAttribute="width" id="QGj-aW-GRd"/>
-                                                                <constraint firstItem="QSo-EI-eMw" firstAttribute="centerY" secondItem="OsV-JE-0L5" secondAttribute="centerY" id="RmN-mU-Rvm"/>
+                                                                <constraint firstItem="QSo-EI-eMw" firstAttribute="centerX" secondItem="e1O-Ts-aTU" secondAttribute="centerX" id="Lgb-Qc-eZv"/>
+                                                                <constraint firstItem="NIV-F1-Nz0" firstAttribute="width" secondItem="e1O-Ts-aTU" secondAttribute="width" id="QGj-aW-GRd"/>
+                                                                <constraint firstItem="QSo-EI-eMw" firstAttribute="top" secondItem="e1O-Ts-aTU" secondAttribute="top" id="rxh-KY-1Cp"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <connections>
@@ -240,7 +240,7 @@
                                                 </cells>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="E68-LL-nB7">
-                                                <rect key="frame" x="0.0" y="420" width="414" height="40"/>
+                                                <rect key="frame" x="0.0" y="415" width="414" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot Deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq4-d3-PjV">
                                                         <rect key="frame" x="20" y="8" width="78" height="24"/>
@@ -266,7 +266,7 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LGC-Nd-Moa">
-                                                <rect key="frame" x="0.0" y="460" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="455" width="414" height="150"/>
                                                 <color key="backgroundColor" name="appBackground"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="cqy-Cz-hrE"/>
