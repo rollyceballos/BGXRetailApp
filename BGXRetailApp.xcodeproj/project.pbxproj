@@ -19,6 +19,7 @@
 		9E6AA01022BF380C00BCFE77 /* DesignableUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */; };
 		9E6AA01122BF380C00BCFE77 /* DesignableUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E6AA01822BF384E00BCFE77 /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6AA01722BF384E00BCFE77 /* RoundedCornerImageView.swift */; };
+		9E6AA01B22BF731700BCFE77 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6AA01A22BF731700BCFE77 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9E6AA00B22BF380C00BCFE77 /* DesignableUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignableUI.h; sourceTree = "<group>"; };
 		9E6AA00C22BF380C00BCFE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6AA01722BF384E00BCFE77 /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
+		9E6AA01A22BF731700BCFE77 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		779EC43922BCA27E000A1255 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9E6AA01922BF730400BCFE77 /* Extensions */,
 				779EC43A22BCA2AC000A1255 /* FeaturedCell.swift */,
 			);
 			path = Views;
@@ -173,6 +176,14 @@
 				9E6AA01722BF384E00BCFE77 /* RoundedCornerImageView.swift */,
 			);
 			path = DesignableViews;
+			sourceTree = "<group>";
+		};
+		9E6AA01922BF730400BCFE77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E6AA01A22BF731700BCFE77 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 			files = (
 				779EC43B22BCA2AC000A1255 /* FeaturedCell.swift in Sources */,
 				776E462222BCAB2B00603693 /* FeaturedStoreData.swift in Sources */,
+				9E6AA01B22BF731700BCFE77 /* UIView+Extensions.swift in Sources */,
 				771ACDE022BC6C9F00109409 /* ViewController.swift in Sources */,
 				771ACDDE22BC6C9F00109409 /* AppDelegate.swift in Sources */,
 			);
