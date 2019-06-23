@@ -14,7 +14,6 @@
 		771ACDE822BC6CA500109409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771ACDE622BC6CA500109409 /* LaunchScreen.storyboard */; };
 		771ACDF322BC6CA500109409 /* BGXRetailAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771ACDF222BC6CA500109409 /* BGXRetailAppTests.swift */; };
 		776E462222BCAB2B00603693 /* FeaturedStoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E462122BCAB2B00603693 /* FeaturedStoreData.swift */; };
-		779E5D2422BCB98A002CB56E /* AppStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779E5D2222BCB98A002CB56E /* AppStoryboard.storyboard */; };
 		779EC43B22BCA2AC000A1255 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779EC43A22BCA2AC000A1255 /* FeaturedCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		771ACDF222BC6CA500109409 /* BGXRetailAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGXRetailAppTests.swift; sourceTree = "<group>"; };
 		771ACDF422BC6CA500109409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		776E462122BCAB2B00603693 /* FeaturedStoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedStoreData.swift; sourceTree = "<group>"; };
-		779E5D2322BCB98A002CB56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AppStoryboard.storyboard; sourceTree = "<group>"; };
 		779EC43A22BCA2AC000A1255 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +89,6 @@
 				771ACDE422BC6CA500109409 /* Assets.xcassets */,
 				771ACDE622BC6CA500109409 /* LaunchScreen.storyboard */,
 				771ACDE922BC6CA500109409 /* Info.plist */,
-				779E5D2222BCB98A002CB56E /* AppStoryboard.storyboard */,
 			);
 			path = BGXRetailApp;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				771ACDE822BC6CA500109409 /* LaunchScreen.storyboard in Resources */,
-				779E5D2422BCB98A002CB56E /* AppStoryboard.storyboard in Resources */,
 				771ACDE522BC6CA500109409 /* Assets.xcassets in Resources */,
 				771ACDE322BC6C9F00109409 /* Main.storyboard in Resources */,
 			);
@@ -263,14 +259,6 @@
 				771ACDE722BC6CA500109409 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		779E5D2222BCB98A002CB56E /* AppStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				779E5D2322BCB98A002CB56E /* Base */,
-			);
-			name = AppStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

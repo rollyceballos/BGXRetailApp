@@ -11,14 +11,17 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var featuredStoresCollectionView: UICollectionView!
     @IBOutlet var featuredFoodCollectionView: UICollectionView!
+    @IBOutlet var hotDealsCollectionView: UICollectionView!
     private var featuredStoresDataSource : UICollectionViewDataSource?
     private var featuredCollectionDataSource : UICollectionViewDataSource?
-    
+    private var hotDealsCollectionDataSource : UICollectionViewDataSource?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initFeaturedStore()
         initFeaturedCollections()
+        initHotDeals()
     }
 
 }
@@ -55,7 +58,7 @@ extension ViewController {
         let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "FeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
             if let featuredCell = cell as? FeaturedFoodCollectionCell {
                 featuredCell.featuredImageView.image = image
-                featuredCell.featuredImageView.cornerRadius = cell.frame.height / 4
+                featuredCell.featuredImageView.cornerRadius = cell.frame.width / 2
             }
             
             return cell
@@ -64,5 +67,39 @@ extension ViewController {
         self.featuredCollectionDataSource = dataSource
         
         featuredFoodCollectionView.dataSource = dataSource
+    }
+    
+    func initHotDeals() {
+        let images : [(UIImage?,String,String)] = [
+            (
+                UIImage(named: "collection-cream"),
+                "30% off!!! When you order Tomyam",
+                "Fast Delivery"
+            ),
+            (
+                UIImage(named: "food-bread"),
+                "Vegan Delight 50% off",
+                "Halal"
+            ),
+            (
+                UIImage(named: "food-baked-goods"),
+                "Baker's Heaven",
+                "Promo!!!"
+            )
+        ]
+        
+        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "HotDealCell") { (tuple, cell) -> UICollectionViewCell in
+            if let featuredCell = cell as? HotDealCollectionCell {
+                featuredCell.hotDealImageView.image = tuple.0
+                featuredCell.promoLabel.text = tuple.1
+                featuredCell.detailLabel.text = tuple.2
+            }
+            
+            return cell
+        }
+        
+        self.hotDealsCollectionDataSource = dataSource
+
+        hotDealsCollectionView.dataSource = dataSource
     }
 }
