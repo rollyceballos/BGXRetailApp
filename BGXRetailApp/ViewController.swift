@@ -58,7 +58,7 @@ extension ViewController {
         let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "FeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
             if let featuredCell = cell as? FeaturedFoodCollectionCell {
                 featuredCell.featuredImageView.image = image
-//                featuredCell.featuredImageView.cornerRadius = cell.frame.height / 4
+                featuredCell.featuredImageView.cornerRadius = cell.frame.width / 2
             }
             
             return cell
@@ -70,13 +70,29 @@ extension ViewController {
     }
     
     func initHotDeals() {
-        let images = [
-            UIImage(named: "collection-cream"),
+        let images : [(UIImage?,String,String)] = [
+            (
+                UIImage(named: "collection-cream"),
+                "30% off!!! When you order Tomyam",
+                "Fast Delivery"
+            ),
+            (
+                UIImage(named: "food-bread"),
+                "Vegan Delight 50% off",
+                "Halal"
+            ),
+            (
+                UIImage(named: "food-baked-goods"),
+                "Baker's Heaven",
+                "Promo!!!"
+            )
         ]
         
-        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "HotDealCell") { (image, cell) -> UICollectionViewCell in
+        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "HotDealCell") { (tuple, cell) -> UICollectionViewCell in
             if let featuredCell = cell as? HotDealCollectionCell {
-                featuredCell.hotDealImageView.image = image
+                featuredCell.hotDealImageView.image = tuple.0
+                featuredCell.promoLabel.text = tuple.1
+                featuredCell.detailLabel.text = tuple.2
             }
             
             return cell

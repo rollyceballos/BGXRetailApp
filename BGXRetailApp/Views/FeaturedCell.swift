@@ -35,17 +35,24 @@ class FeaturedFoodCollectionCell: UICollectionViewCell {
 
 class HotDealCollectionCell : UICollectionViewCell {
     @IBOutlet weak var hotDealImageView: UIImageView!
+    @IBOutlet weak var promoLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     
     override func prepareForReuse() {
         hotDealImageView.image = nil
+        promoLabel.text = nil
+        detailLabel.text = nil
     }
     
     override func prepareForInterfaceBuilder() {
         hotDealImageView.image = UIImage(named: "collection-cream")
+        promoLabel.text = "30% off!!! When you order Tomyam"
+        detailLabel.text = "Fast Delivery"
     }
 }
 
-@IBDesignable class FeaturedImageView : UIImageView {
+//@IBDesignable
+class FeaturedImageView : UIImageView {
     @IBInspectable var cornerRadius: CGFloat = 15 {
         didSet {
             refreshView(radius: cornerRadius)
