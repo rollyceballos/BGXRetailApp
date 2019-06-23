@@ -181,15 +181,12 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnt-lI-bDi">
-                                                        <rect key="frame" x="320" y="8" width="74" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnt-lI-bDi">
+                                                        <rect key="frame" x="333" y="8" width="61" height="24"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <color key="tintColor" name="minorButtonColor"/>
                                                         <state key="normal" title="See All &gt;">
                                                             <color key="titleColor" name="minorButtonColor"/>
-                                                        </state>
-                                                        <state key="highlighted">
-                                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
@@ -315,8 +312,8 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-2l-dlH">
-                                                        <rect key="frame" x="320" y="8" width="74" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <rect key="frame" x="333" y="8" width="61" height="24"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <color key="tintColor" name="minorButtonColor"/>
                                                         <state key="normal" title="See All &gt;">
                                                             <color key="titleColor" name="minorButtonColor"/>
