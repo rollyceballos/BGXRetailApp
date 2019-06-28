@@ -65,6 +65,9 @@
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <color key="tintColor" name="majorButtonColor"/>
                                                         <state key="normal" image="slider.horizontal.3" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="checkout" destination="BYZ-38-t0r" eventType="touchUpInside" id="zhH-w5-B1g"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
