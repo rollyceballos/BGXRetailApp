@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class FeaturedStoreDataSource<Model>: NSObject, UICollectionViewDataSource {
+class CollectionDataSource<Model>: NSObject, UICollectionViewDataSource {
     typealias CellConfigurator = (Model,UICollectionViewCell) -> UICollectionViewCell
-    private let featuredModels : [Model]
+    private let models : [Model]
     private let reuseIdentifier : String
     private let cellConfigurator : CellConfigurator?
     
@@ -19,13 +19,13 @@ class FeaturedStoreDataSource<Model>: NSObject, UICollectionViewDataSource {
          reuseIdentifier: String,
          configurator: CellConfigurator?
         ) {
-        featuredModels = models
+        self.models = models
         self.reuseIdentifier = reuseIdentifier
         self.cellConfigurator = configurator
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return featuredModels.count
+        return models.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,7 +35,7 @@ class FeaturedStoreDataSource<Model>: NSObject, UICollectionViewDataSource {
             return cell
         }
 
-        let model = featuredModels[indexPath.row]
+        let model = models[indexPath.row]
         
         return configurator(model,cell)
     }

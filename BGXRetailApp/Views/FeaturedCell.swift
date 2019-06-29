@@ -12,13 +12,17 @@ import DesignableUI
 
 class FeaturedStoreCell : UICollectionViewCell {
     @IBOutlet weak var featuredImageView: RoundedCornerImageView!
+    private var lazyImageTask: Cancellable?
     
     override func prepareForReuse() {
+        super.prepareForReuse()
+        lazyImageTask?.cancel()
+        lazyImageTask = nil
         featuredImageView.image = nil
     }
     
-    override func prepareForInterfaceBuilder() {
-        featuredImageView.image = UIImage(named: "collection-bbq")
+    public func setImage(at imageURL:URL, placeholder: UIImage? = nil) {
+        lazyImageTask = featuredImageView.iae.setImage(from: imageURL, placeHolder: placeholder, completionHandler: nil)
     }
 }
 

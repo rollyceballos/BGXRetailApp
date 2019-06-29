@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private func showInitialData() {
-        let dataSource = FeaturedStoreDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingFeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
+        let dataSource = CollectionDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingFeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
             cell.fadeInOut()
             
             return cell
@@ -37,7 +37,7 @@ extension ViewController {
         self.featuredStoresDataSource = dataSource
         featuredStoresCollectionView.dataSource = dataSource
         
-        let dataSource2 = FeaturedStoreDataSource(
+        let dataSource2 = CollectionDataSource(
             [UIImage?](repeating: nil, count: 1),
             reuseIdentifier: "LoadingFeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
                 cell.fadeInOut()
@@ -48,7 +48,7 @@ extension ViewController {
         self.featuredCollectionDataSource = dataSource2
         featuredFoodCollectionView.dataSource = dataSource2
         
-        let dataSource3 = FeaturedStoreDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingHotDealCell") { (image, cell) -> UICollectionViewCell in
+        let dataSource3 = CollectionDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingHotDealCell") { (image, cell) -> UICollectionViewCell in
             cell.fadeInOut()
             
             return cell
@@ -58,9 +58,8 @@ extension ViewController {
     }
     
     private func loadDynamicMockData() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
-            self?.initFeaturedStore()
-        }
+        self.initFeaturedStore()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
             self?.initFeaturedCollections()
         }
@@ -70,23 +69,25 @@ extension ViewController {
     }
     
     private func initFeaturedStore() {
-        let images = [
-            UIImage(named: "collection-salad"),
-            UIImage(named: "collection-cream"),
-            UIImage(named: "collection-barbecue-beef")
-        ]
-        
-        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "FeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
-            if let featuredCell = cell as? FeaturedStoreCell {
-                featuredCell.featuredImageView.image = image
+        Client.shared.fetchCollections { [weak featuredStoresCollectionView, weak self] (items) in
+            guard let items = items else {
+                return
+            }
+            let dataSource = CollectionDataSource(items, reuseIdentifier: "FeaturedStoreCell") { (item, cell) -> UICollectionViewCell in
+                if let featuredCell = cell as? FeaturedStoreCell, let url = item.imageUrl {
+                    featuredCell.setImage(at: url)
+                }
+                
+                return cell
             }
             
-            return cell
+            self?.featuredStoresDataSource = dataSource
+            
+            DispatchQueue.main.async {
+                featuredStoresCollectionView?.animate(with: dataSource)
+            }
         }
         
-        self.featuredStoresDataSource = dataSource
-        
-        featuredStoresCollectionView.animate(with: dataSource)
     }
     
     private func initFeaturedCollections() {
@@ -96,7 +97,7 @@ extension ViewController {
             UIImage(named: "food-baked-goods"),
        ]
         
-        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "FeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
+        let dataSource = CollectionDataSource(images, reuseIdentifier: "FeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
             if let featuredCell = cell as? FeaturedFoodCollectionCell {
                 featuredCell.featuredImageView.image = image
                 featuredCell.featuredImageView.cornerRadius = cell.frame.width / 2
@@ -129,7 +130,7 @@ extension ViewController {
             )
         ]
         
-        let dataSource = FeaturedStoreDataSource(images, reuseIdentifier: "HotDealCell") { (tuple, cell) -> UICollectionViewCell in
+        let dataSource = CollectionDataSource(images, reuseIdentifier: "HotDealCell") { (tuple, cell) -> UICollectionViewCell in
             if let featuredCell = cell as? HotDealCollectionCell {
                 featuredCell.hotDealImageView.image = tuple.0
                 featuredCell.promoLabel.text = tuple.1

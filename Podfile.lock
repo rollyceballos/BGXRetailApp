@@ -1,0 +1,16 @@
+PODS:
+  - Mobile-Buy-SDK (3.5.2)
+
+DEPENDENCIES:
+  - Mobile-Buy-SDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Mobile-Buy-SDK
+
+SPEC CHECKSUMS:
+  Mobile-Buy-SDK: 09ca15b15c3b615a4c2d34f0078562926c78c631
+
+PODFILE CHECKSUM: 8ac4703830d62dd38ebe6365a78b426f08421338
+
+COCOAPODS: 1.7.2
