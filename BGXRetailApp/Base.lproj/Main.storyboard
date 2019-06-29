@@ -251,7 +251,9 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <connections>
+                                                            <outlet property="detailLabel" destination="86C-1y-3yp" id="5jh-of-Y5H"/>
                                                             <outlet property="featuredImageView" destination="NIV-F1-Nz0" id="qgd-tl-qmn"/>
+                                                            <outlet property="label" destination="nkb-QS-AKT" id="kki-fr-0ek"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoadingFeaturedCollectionCell" id="Vik-NQ-tdU" customClass="FeaturedFoodCollectionCell" customModule="BGXRetailApp" customModuleProvider="target">

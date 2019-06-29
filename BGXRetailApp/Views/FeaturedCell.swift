@@ -28,13 +28,24 @@ class FeaturedStoreCell : UICollectionViewCell {
 
 class FeaturedFoodCollectionCell: UICollectionViewCell {
     @IBOutlet weak var featuredImageView: RoundedCornerImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
+    private var lazyImageTask: Cancellable?
 
     override func prepareForReuse() {
+        super.prepareForReuse()
+        lazyImageTask?.cancel()
+        lazyImageTask = nil
         featuredImageView.image = nil
     }
     
     override func prepareForInterfaceBuilder() {
         featuredImageView.image = UIImage(named: "food-banana")
+    }
+    
+    public func setImage(at imageURL:URL, placeholder: UIImage? = nil) {
+        lazyImageTask = featuredImageView.iae.setImage(from: imageURL, placeHolder: placeholder, completionHandler: nil)
     }
 }
 

@@ -28,6 +28,7 @@
 		9E2B529622C6FA3100EE4B56 /* StoreCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B529522C6FA3100EE4B56 /* StoreCollection.swift */; };
 		9E2B529922C6FBB200EE4B56 /* CollectionDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B529822C6FBB200EE4B56 /* CollectionDataService.swift */; };
 		9E2B529B22C706E900EE4B56 /* ImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B529A22C706E900EE4B56 /* ImageView+Extensions.swift */; };
+		9E2B529D22C7140100EE4B56 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2B529C22C7140100EE4B56 /* Image+Extensions.swift */; };
 		9E6AA00D22BF380C00BCFE77 /* DesignableUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AA00B22BF380C00BCFE77 /* DesignableUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E6AA01022BF380C00BCFE77 /* DesignableUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */; };
 		9E6AA01122BF380C00BCFE77 /* DesignableUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -97,6 +98,7 @@
 		9E2B529522C6FA3100EE4B56 /* StoreCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollection.swift; sourceTree = "<group>"; };
 		9E2B529822C6FBB200EE4B56 /* CollectionDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataService.swift; sourceTree = "<group>"; };
 		9E2B529A22C706E900EE4B56 /* ImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Extensions.swift"; sourceTree = "<group>"; };
+		9E2B529C22C7140100EE4B56 /* Image+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignableUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6AA00B22BF380C00BCFE77 /* DesignableUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignableUI.h; sourceTree = "<group>"; };
 		9E6AA00C22BF380C00BCFE77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		9E6AA01922BF730400BCFE77 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9E2B529C22C7140100EE4B56 /* Image+Extensions.swift */,
 				9E2B529A22C706E900EE4B56 /* ImageView+Extensions.swift */,
 				9E6AA01A22BF731700BCFE77 /* UIView+Extensions.swift */,
 			);
@@ -529,6 +532,7 @@
 				9E2B529622C6FA3100EE4B56 /* StoreCollection.swift in Sources */,
 				9E6AA01B22BF731700BCFE77 /* UIView+Extensions.swift in Sources */,
 				9E2B529122C6408F00EE4B56 /* Fragment+OrderLineItemConnectionQuery.swift in Sources */,
+				9E2B529D22C7140100EE4B56 /* Image+Extensions.swift in Sources */,
 				9E2B528D22C6408F00EE4B56 /* Fragment+VariantConnectionQuery.swift in Sources */,
 				9E2B529B22C706E900EE4B56 /* ImageView+Extensions.swift in Sources */,
 				771ACDE022BC6C9F00109409 /* ViewController.swift in Sources */,

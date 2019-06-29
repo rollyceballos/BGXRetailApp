@@ -9,7 +9,9 @@
 import Foundation
 
 public struct StoreCollection {
-    let id: String
-    let imageUrl: URL?
-    let description: String
+    let id:             String
+    let name:           String
+    let imageUrl:       URL?
+    let description:    String
+    let productCount:   Int
 }

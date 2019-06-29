@@ -58,57 +58,66 @@ extension ViewController {
     }
     
     private func loadDynamicMockData() {
-        self.initFeaturedStore()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
-            self?.initFeaturedCollections()
+            self?.initFeaturedStore()
         }
+        
+        self.initFeaturedCollections()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int.random(in: 0...10))) { [weak self] in
             self?.initHotDeals()
         }
     }
     
     private func initFeaturedStore() {
-        Client.shared.fetchCollections { [weak featuredStoresCollectionView, weak self] (items) in
-            guard let items = items else {
-                return
-            }
-            let dataSource = CollectionDataSource(items, reuseIdentifier: "FeaturedStoreCell") { (item, cell) -> UICollectionViewCell in
-                if let featuredCell = cell as? FeaturedStoreCell, let url = item.imageUrl {
-                    featuredCell.setImage(at: url)
-                }
-                
-                return cell
-            }
-            
-            self?.featuredStoresDataSource = dataSource
-            
-            DispatchQueue.main.async {
-                featuredStoresCollectionView?.animate(with: dataSource)
-            }
-        }
-        
-    }
-    
-    private func initFeaturedCollections() {
         let images = [
-            UIImage(named: "food-banana"),
-            UIImage(named: "food-bread"),
-            UIImage(named: "food-baked-goods"),
-       ]
+            UIImage(named: "collection-salad"),
+            UIImage(named: "collection-cream"),
+            UIImage(named: "collection-barbecue-beef")
+        ]
         
-        let dataSource = CollectionDataSource(images, reuseIdentifier: "FeaturedCollectionCell") { (image, cell) -> UICollectionViewCell in
-            if let featuredCell = cell as? FeaturedFoodCollectionCell {
+        let dataSource = CollectionDataSource(images, reuseIdentifier: "FeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
+            if let featuredCell = cell as? FeaturedStoreCell {
                 featuredCell.featuredImageView.image = image
-                featuredCell.featuredImageView.cornerRadius = cell.frame.width / 2
             }
             
             return cell
         }
         
-        self.featuredCollectionDataSource = dataSource
+        self.featuredStoresDataSource = dataSource
         
-        featuredFoodCollectionView.animate(with: dataSource)
+        featuredStoresCollectionView.animate(with: dataSource)
+    }
+    
+    private func initFeaturedCollections() {
+        Client.shared.fetchCollections { [weak featuredFoodCollectionView, weak self] (items) in
+            guard let items = items else {
+                return
+            }
+            let dataSource = CollectionDataSource(items, reuseIdentifier: "FeaturedCollectionCell") { (item, cell) -> UICollectionViewCell in
+                if let featuredCell = cell as? FeaturedFoodCollectionCell {
+                    let placeholderImage = UIImage.from(color: UIColor(named: "discreteImageColor")!)
+                    if let url = item.imageUrl {
+                        featuredCell.setImage(at: url, placeholder: placeholderImage)
+                    } else {
+                        featuredCell.featuredImageView.image = placeholderImage
+                    }
+                    
+                    featuredCell.featuredImageView.cornerRadius = cell.frame.width / 2
+                    
+                    featuredCell.label.text         = item.name
+                    featuredCell.detailLabel.text   = "\(item.productCount) items"
+                }
+                
+                return cell
+            }
+            
+            self?.featuredCollectionDataSource = dataSource
+            
+            DispatchQueue.main.async {
+                featuredFoodCollectionView?.animate(with: dataSource)
+            }
+        }
     }
     
     func initHotDeals() {

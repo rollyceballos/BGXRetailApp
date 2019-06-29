@@ -47,7 +47,7 @@ final class Client: CollectionDataService {
                             .transformedSrc()
                         }
                         
-                        .products(first: Int32(1), after: nil) { $0
+                        .products(first: Int32(250), after: nil) { $0
                             .fragmentForStandardProduct()
                         }
                     }
@@ -109,8 +109,10 @@ extension GraphTask: Cancellable where Base == Task {
 extension StoreCollection {
     init(_ edge:Storefront.CollectionEdge) {
         self.id             = edge.node.id.rawValue
+        self.name           = edge.node.title
         self.description    = edge.node.descriptionHtml
         self.imageUrl       = edge.node.image?.transformedSrc
+        self.productCount   = edge.node.products.edges.count
     }
 }
 
