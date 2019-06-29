@@ -247,6 +247,8 @@
                                                             <constraints>
                                                                 <constraint firstItem="QSo-EI-eMw" firstAttribute="centerX" secondItem="e1O-Ts-aTU" secondAttribute="centerX" id="Lgb-Qc-eZv"/>
                                                                 <constraint firstItem="NIV-F1-Nz0" firstAttribute="width" secondItem="e1O-Ts-aTU" secondAttribute="width" id="QGj-aW-GRd"/>
+                                                                <constraint firstItem="nkb-QS-AKT" firstAttribute="width" relation="lessThanOrEqual" secondItem="e1O-Ts-aTU" secondAttribute="width" id="SOH-jz-y3A"/>
+                                                                <constraint firstItem="86C-1y-3yp" firstAttribute="width" relation="lessThanOrEqual" secondItem="e1O-Ts-aTU" secondAttribute="width" id="rfp-vY-Fr8"/>
                                                                 <constraint firstItem="QSo-EI-eMw" firstAttribute="top" secondItem="e1O-Ts-aTU" secondAttribute="top" id="rxh-KY-1Cp"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
