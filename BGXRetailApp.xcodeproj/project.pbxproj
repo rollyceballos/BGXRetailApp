@@ -14,6 +14,8 @@
 		771ACDF322BC6CA500109409 /* BGXRetailAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771ACDF222BC6CA500109409 /* BGXRetailAppTests.swift */; };
 		776E462222BCAB2B00603693 /* FeaturedStoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E462122BCAB2B00603693 /* FeaturedStoreData.swift */; };
 		779EC43B22BCA2AC000A1255 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779EC43A22BCA2AC000A1255 /* FeaturedCell.swift */; };
+		9E0F24A722C8C90A001BEF15 /* RecommendationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0F24A622C8C90A001BEF15 /* RecommendationView.xib */; };
+		9E0F24AA22C8CC48001BEF15 /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F24A922C8CC48001BEF15 /* RecommendationView.swift */; };
 		9E53F0CF22C6204C0064D2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E53F0CD22C6204C0064D2CB /* Main.storyboard */; };
 		9E6AA00D22BF380C00BCFE77 /* DesignableUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E6AA00B22BF380C00BCFE77 /* DesignableUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E6AA01022BF380C00BCFE77 /* DesignableUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */; };
@@ -65,6 +67,8 @@
 		771ACDF422BC6CA500109409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		776E462122BCAB2B00603693 /* FeaturedStoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedStoreData.swift; sourceTree = "<group>"; };
 		779EC43A22BCA2AC000A1255 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
+		9E0F24A622C8C90A001BEF15 /* RecommendationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationView.xib; sourceTree = "<group>"; };
+		9E0F24A922C8CC48001BEF15 /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
 		9E53F0CE22C6204C0064D2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E6AA00922BF380B00BCFE77 /* DesignableUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignableUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6AA00B22BF380C00BCFE77 /* DesignableUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignableUI.h; sourceTree = "<group>"; };
@@ -154,16 +158,26 @@
 		779EC43922BCA27E000A1255 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9E0F24A822C8CC2C001BEF15 /* ReusableViews */,
 				9E6AA01922BF730400BCFE77 /* Extensions */,
 				779EC43A22BCA2AC000A1255 /* FeaturedCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9E0F24A822C8CC2C001BEF15 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E0F24A922C8CC48001BEF15 /* RecommendationView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		9E53F0CC22C6204C0064D2CB /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				9E53F0CD22C6204C0064D2CB /* Main.storyboard */,
+				9E0F24A622C8C90A001BEF15 /* RecommendationView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -314,6 +328,7 @@
 				9E53F0CF22C6204C0064D2CB /* Main.storyboard in Resources */,
 				771ACDE822BC6CA500109409 /* LaunchScreen.storyboard in Resources */,
 				771ACDE522BC6CA500109409 /* Assets.xcassets in Resources */,
+				9E0F24A722C8C90A001BEF15 /* RecommendationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +358,7 @@
 				9E6AA01B22BF731700BCFE77 /* UIView+Extensions.swift in Sources */,
 				771ACDE022BC6C9F00109409 /* ViewController.swift in Sources */,
 				771ACDDE22BC6C9F00109409 /* AppDelegate.swift in Sources */,
+				9E0F24AA22C8CC48001BEF15 /* RecommendationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

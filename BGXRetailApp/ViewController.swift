@@ -12,10 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var featuredStoresCollectionView: UICollectionView!
     @IBOutlet var featuredFoodCollectionView: UICollectionView!
     @IBOutlet var hotDealsCollectionView: UICollectionView!
+
     private var featuredStoresDataSource : UICollectionViewDataSource?
     private var featuredCollectionDataSource : UICollectionViewDataSource?
     private var hotDealsCollectionDataSource : UICollectionViewDataSource?
 
+    @IBOutlet weak var mainStackView: UIStackView!
+    
+    private var recommendations = [UIViewController]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +28,23 @@ class ViewController: UIViewController {
         loadDynamicMockData()
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) { [unowned self, unowned mainStackView] in
+            let controller = RecommendationController(nibName: "RecommendationView", bundle: nil)
+            self.recommendations.append(controller)
+            
+            controller.append(to: self, in: mainStackView!)
+        }
+    }
 }
 
 
 extension ViewController {
+    
     private func showInitialData() {
         let dataSource = FeaturedStoreDataSource([UIImage?](repeating: nil, count: 1), reuseIdentifier: "LoadingFeaturedStoreCell") { (image, cell) -> UICollectionViewCell in
             cell.fadeInOut()

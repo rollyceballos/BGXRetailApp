@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vl-N0-ICQ">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TH1-4f-oQn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="826.5"/>
@@ -533,6 +533,7 @@
                         <outlet property="featuredFoodCollectionView" destination="x1u-BR-jrv" id="gba-Hr-HrE"/>
                         <outlet property="featuredStoresCollectionView" destination="Yr5-HX-WWB" id="a1Z-jx-2dG"/>
                         <outlet property="hotDealsCollectionView" destination="LGC-Nd-Moa" id="pIw-cE-fLz"/>
+                        <outlet property="mainStackView" destination="TH1-4f-oQn" id="hOf-bs-XkH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
