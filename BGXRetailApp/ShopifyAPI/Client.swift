@@ -13,8 +13,8 @@ extension URLSessionTask: Cancellable { }
 
 final class Client: CollectionDataService {
     
-    static let shopDomain = "graphql.myshopify.com"
-    static let apiKey     = "8e2fef6daed4b93cf4e731f580799dd1"
+    static let shopDomain = "bgx-demo.myshopify.com"
+    static let apiKey     = "e37df7077f2f07e7b0b4f1e4bb075645"
     static let merchantID = "merchant.com.your.id"
     
     static let maxImageDimension = Int32(UIScreen.main.bounds.width)
